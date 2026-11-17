@@ -59,7 +59,7 @@ public class FuncionarioComissionado extends Funcionario implements Tributavel {
         return percentualComissao;
     }
 
-    public void setPercentualComissao(double percentualComissao) {
+    public final void setPercentualComissao(double percentualComissao) {
         this.percentualComissao = Validacoes.percentual(percentualComissao, "Percentual de comissão");
     }
 
@@ -67,7 +67,7 @@ public class FuncionarioComissionado extends Funcionario implements Tributavel {
         return totalVendas;
     }
 
-    public void setTotalVendas(double totalVendas) {
+    public final void setTotalVendas(double totalVendas) {
         this.totalVendas = Validacoes.naoNegativo(totalVendas, "Total de vendas");
     }
 }

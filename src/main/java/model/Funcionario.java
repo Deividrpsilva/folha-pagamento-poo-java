@@ -81,7 +81,7 @@ public abstract class Funcionario implements Identificavel {
         return nome;
     }
 
-    public void setNome(String nome) {
+    public final void setNome(String nome) {
         this.nome = Validacoes.obrigatorio(nome, "Nome");
     }
 
@@ -90,7 +90,7 @@ public abstract class Funcionario implements Identificavel {
         return cpf;
     }
 
-    public void setCpf(String cpf) {
+    public final void setCpf(String cpf) {
         Validacoes.obrigatorio(cpf, "CPF");
         if (!ValidadorCpf.isValido(cpf)) {
             throw new CpfInvalidoException(cpf);
@@ -102,7 +102,7 @@ public abstract class Funcionario implements Identificavel {
         return salarioBase;
     }
 
-    public void setSalarioBase(double salarioBase) {
+    public final void setSalarioBase(double salarioBase) {
         this.salarioBase = Validacoes.naoNegativo(salarioBase, "Salário-base");
     }
 

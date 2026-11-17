@@ -47,7 +47,7 @@ public class FuncionarioCLT extends Funcionario implements Tributavel {
         return beneficios;
     }
 
-    public void setBeneficios(double beneficios) {
+    public final void setBeneficios(double beneficios) {
         this.beneficios = Validacoes.naoNegativo(beneficios, "Benefícios");
     }
 }

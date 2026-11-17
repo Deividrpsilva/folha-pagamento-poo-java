@@ -43,7 +43,7 @@ public class FuncionarioPJ extends Funcionario {
         return valorPorProjeto;
     }
 
-    public void setValorPorProjeto(double valorPorProjeto) {
+    public final void setValorPorProjeto(double valorPorProjeto) {
         this.valorPorProjeto = Validacoes.naoNegativo(valorPorProjeto, "Valor por projeto");
     }
 
@@ -51,7 +51,7 @@ public class FuncionarioPJ extends Funcionario {
         return quantidadeProjetos;
     }
 
-    public void setQuantidadeProjetos(int quantidadeProjetos) {
+    public final void setQuantidadeProjetos(int quantidadeProjetos) {
         this.quantidadeProjetos = Validacoes.naoNegativo(quantidadeProjetos, "Quantidade de projetos");
     }
 }
